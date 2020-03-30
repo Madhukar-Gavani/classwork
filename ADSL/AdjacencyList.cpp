@@ -48,5 +48,18 @@ int main()
 			}
 		}
 	}
-	cout<<"output"<<Array[0]->Next->Next->data;
+	int i=0;
+	while(Array[i]!=NULL){
+	    NextNode = Array[i]->Next;
+	    cout<<"connected edges are : "<<endl;
+	    while(NextNode->Next != NULL)
+	    {
+	        cout<<Array[i]->data<<" -> "<<NextNode->data;
+	        NextNode = NextNode->Next;
+	        cout<<endl;
+	    }
+	    cout<<Array[i]->data<<" -> "<<NextNode->data<<endl;
+	    ++i;
+	}
+	cout<<"Thank You "<<endl;
 }
